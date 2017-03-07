@@ -22,22 +22,22 @@
                 </p>
                 <p>
                     <label for="mail">E-mail:</label>
-                    <input id="mail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                    <input id="mail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </p>
                 <p>
-                    <label for="date" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])
-">Date:</label>
-                    <input id="date" type="date">
+                    <label for="date">Date:</label>
+                    <input id="date" type="date" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])
+" required>
                 </p>
                 <p>
                     <label for="webpage">Link to your webpage:</label>
-                    <input id="webpage" type="url">
+                    <input id="webpage" type="url" required>
                 </p>
                 <p>
-                    <label for="fruit">What fruit do you prefere?:</label>
-                    <input id="fruit" type="radio" value="banana" checked>
-                    <input id="fruit" type="radio" value="peach">
-                    <input id="fruit" type="radio" value="strawberry">
+                    Which fruit do you prefere?
+                    <input name="fruit" type="radio" value="banana"> banana
+                    <input name="fruit" type="radio" value="peach"> peach
+                    <input name="fruit" type="radio" value="strawberry"> strawberry
                 </p>
                 <p>
                     <button>Submit</button>

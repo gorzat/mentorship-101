@@ -4,14 +4,21 @@
         <meta charset="UTF-8">
         <title>Form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css
+
+" rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Open+Sans+Condensed:300" rel="stylesheet">
+
+        <link href="form-style.css" rel=stylesheet>
+        
     </head>
     <body>
-        <h1>Amazing form</h1>
+        <h1 class="title">Amazing form</h1>
         <p>this form is useless</p>
 
-        <form>
+        <form class="main-form">
             <fieldset>
-                <legend>Register for our amazing event!</legend>
+                <legend class="title">Register for our amazing event!</legend>
                 <p>
                     <label for="name">Name:</label>
                     <input id="name" type="text">
@@ -32,14 +39,25 @@
                     <label for="webpage">Link to your webpage:</label>
                     <input id="webpage" type="url" required>
                 </p>
+                <div class="form-radio">
+                    <p>
+                        Which fruit do you prefere?
+                    </p>
+                    <div>
+                        <input name="fruit" id="banana" type="radio" value="banana"> 
+                        <label for="banana">banana</label>
+                    </div>
+                    <div>
+                        <input name="fruit" id="peach" type="radio" value="peach"> 
+                        <label for="peach">peach</label>
+                    </div>
+                    <div>
+                        <input name="fruit" id="strawberry" type="radio" value="strawberry"> 
+                        <label for="strawberry">strawberry</label>
+                    </div> 
+                </div>
                 <p>
-                    Which fruit do you prefere?
-                    <input name="fruit" type="radio" value="banana"> banana
-                    <input name="fruit" type="radio" value="peach"> peach
-                    <input name="fruit" type="radio" value="strawberry"> strawberry
-                </p>
-                <p>
-                    <button>Submit</button>
+                    <button class="submit-button">Submit</button>
                 </p>
             </fieldset>
         </form>

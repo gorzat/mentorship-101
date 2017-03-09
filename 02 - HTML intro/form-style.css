@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF8EB;
+}
+
+p {
+   font-family: 'Open Sans Condensed', sans-serif;
+   padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+}
+
+
+.description {
+    text-align: center;
+}
+
+.main-form {
+    background-color: #FF9CD6;
+    width: 400px;
+    height: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.submit-button {
+  background-color: #94F246;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  position: sticky;
+  top: 500px;
+}

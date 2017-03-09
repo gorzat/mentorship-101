@@ -27,9 +27,7 @@ h1 {
 
 .main-form {
     background-color: #FF9CD6;
-    width: 400px;
     padding: 20px;
-    margin: 0 auto;
 }
 
 .submit-button {
@@ -38,4 +36,11 @@ h1 {
   height: 50px;
   border-radius: 10px;
   border: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .main-form {
+        width: 400px;
+        margin: 0 auto;
+    }
 }

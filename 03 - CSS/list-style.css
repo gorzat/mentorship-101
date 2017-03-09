@@ -1,0 +1,14 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.dots {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dots li::before {
+    content:'\00203b';
+    color: deeppink;
+    margin-right: 3px;
+}

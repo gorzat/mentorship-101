@@ -8,20 +8,34 @@ const root = document.body;
 //elem.style.backgroundColor 
 //$0.style[name] = value;
 
-
-for (i=0; i<styles.length; i++){
-    var colorEl = styles[i].class;
-    console.log(colorEl);
-    for (k=0; k<temp; k++){
-        document.getElementByClassName[k].backgroundColor = colorEl;
+function addStyle(styleCss, el, colorEl){
+  for (k=0; k<styleCss.length; k++){
+    if (styleCss[k].class === colorEl){
+    for(l=0; l<styleCss[k].params.length; l++){
+    
+    let nameCss = styleCss[k].params[l].name;
+       if(nameCss === "background-color"){
+         nameCss = "backgroundColor";
+       }
+    let valueCss = styleCss[k].params[l].value;
+    
+    el.style[nameCss] = valueCss;
     }
-
-    for (let j=0; j<root.children.length; j++){
-        if (root.children[j].classList.contains(colorEl)){
-            let temp = document.getElementsByClassName(colorEl);
-            for (k=0; k<temp; k++){
-                document.getElementByClassName[k].backgroundColor = colorEl;
-            }
-        }
     }
+  }
 }
+
+function testDepth(el, depth){
+  for (var i=0; el.children.length > i; i++) {
+    testDepth(el.children[i], depth+1);
+    for (var j=0; j<styles.length; j++){
+        var colorEl = styles[j].class;
+    if (el.children[i].classList.contains(colorEl)){
+  
+                addStyle(styles, el.children[i], colorEl);
+            }
+    }
+  }
+}
+
+testDepth(document.body, 0);

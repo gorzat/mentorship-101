@@ -1,0 +1,17 @@
+@import 'normalize';
+@import 'top-bar';
+@import 'main-nav';
+@import 'page-logo';
+@import 'page-content';
+@import 'map-box';
+@import 'cities-list';
+@import 'content-header';
+@import 'main-footer';
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background-color: lightblue;
+}
+

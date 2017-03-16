@@ -1,0 +1,25 @@
+.top-bar {
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    background-color: dodgerblue;
+    width: 100%;
+    color: ghostwhite;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: row;
+}
+
+.top-bar__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.top-bar__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

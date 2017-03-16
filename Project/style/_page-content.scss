@@ -7,7 +7,7 @@
     position: absolute;
     top: 80px;
     background-color: ghostwhite;
-    padding: 20px 40px 20px 40px;
+    padding: 20px $pagePadding 20px $pagePadding;
 }
 
 .page-content__aside {

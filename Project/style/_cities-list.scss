@@ -1,6 +1,5 @@
 .cities-list {
-    list-style-type: none;
-    text-decoration: none;
+    @include plainList;
 }
 
 .cities-list__element {

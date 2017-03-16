@@ -1,9 +1,9 @@
 .cities-list {
     @include plainList;
-}
-
-.cities-list__element {
-    border-top: 1px solid lightblue;
-    font-weight: 300;
-    padding: 20px;
+    
+    &__element {
+        border-top: 1px solid lightblue;
+        font-weight: 300;
+        padding: 20px;
+    }
 }

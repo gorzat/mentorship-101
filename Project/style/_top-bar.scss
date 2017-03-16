@@ -9,17 +9,17 @@
     padding-left: $pagePadding;
     padding-right: $pagePadding;
     flex-direction: row;
-}
 
-.top-bar__left {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
+    &_left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
 
-.top-bar__right {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
+    &__right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
 }

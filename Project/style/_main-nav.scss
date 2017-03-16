@@ -1,17 +1,19 @@
-.main-nav__list {
-    @include plainList;
-}
+.main-nav{
+    &__list {
+        @include plainList;
+    }
 
-.main-nav__element {
-    display: inline;
-    padding-left: $pagePadding;
-}
+    &_element {
+        display: inline;
+        padding-left: $pagePadding;
+    }
 
-.main-nav__link {
-    color: ghostwhite;
-    text-decoration: none;
-}
+    &__link {
+        color: ghostwhite;
+        text-decoration: none;
+    }
 
-.main-nav__link--small {
-    font-size: 0.8rem;
+    &__link--small {
+        font-size: 0.8rem;
+    }
 }

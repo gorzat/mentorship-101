@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background-color: lightblue;
+}
+
+.top-bar {
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    background-color: dodgerblue;
+    width: 100%;
+    color: ghostwhite;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: row;
+}
+
+.top-bar__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.top-bar__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.page-logo {
+    font-size: 2rem;
+}
+
+.main-nav__list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.main-nav__element {
+    display: inline;
+    padding-left: 40px;
+}
+
+.main-nav__link {
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+.main-nav__link--small {
+    font-size: 0.8rem;
+}
+
+.page-content {
+    position: relative;
+}
+
+.page-content__main {
+    width: 50%;
+    position: absolute;
+    top: 80px;
+    background-color: ghostwhite;
+    padding: 20px 40px 20px 40px;
+}
+
+.content-header__title {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.content-header__description {
+    padding-bottom: 20px;
+}
+
+.cities-list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.cities-list__element {
+    border-top: 1px solid lightblue;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.city-box__title {
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.city-box__description {
+    padding-bottom: 20px;
+}
+
+.page-content__aside {
+    width: 50%;
+    position: fixed;
+    top: 80px;
+    bottom: 30px;
+    right: 0;
+    z-index: -1;
+}
+
+.map-box {
+    width: 50%;
+    position: fixed;
+    top: 80px;
+    bottom: 30px;
+    right: 0;
+    z-index: -1;
+}
+
+.map-box__title {
+    display: none;
+}
+
+.map-box__picture {
+    height: 100%;
+}
+
+.main-footer {
+    background-color: lightblue;
+    font-size: 0.8rem;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    display: flexed;
+    bottom: 0;
+    padding-left: 40px;
+}
+
+.main-footer__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

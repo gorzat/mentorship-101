@@ -1,0 +1,20 @@
+.page-content {
+    position: relative;
+}
+
+.page-content__main {
+    width: 50%;
+    position: absolute;
+    top: 80px;
+    background-color: ghostwhite;
+    padding: 20px 40px 20px 40px;
+}
+
+.page-content__aside {
+    width: 50%;
+    position: fixed;
+    top: 80px;
+    bottom: 30px;
+    right: 0;
+    z-index: -1;
+}

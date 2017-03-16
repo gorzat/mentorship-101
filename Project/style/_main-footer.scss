@@ -1,0 +1,16 @@
+.main-footer {
+    background-color: lightblue;
+    font-size: 0.8rem;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    padding-left: 40px;
+}
+
+.main-footer__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

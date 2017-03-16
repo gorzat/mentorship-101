@@ -1,0 +1,16 @@
+.map-box {
+    width: 50%;
+    position: fixed;
+    top: 80px;
+    bottom: 30px;
+    right: 0;
+    z-index: -1;
+}
+
+.map-box__title {
+    display: none;
+}
+
+.map-box__picture {
+    height: 100%;
+}

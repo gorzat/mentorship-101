@@ -1,11 +1,10 @@
 .main-nav__list {
-    list-style-type: none;
-    text-decoration: none;
+    @include plainList;
 }
 
 .main-nav__element {
     display: inline;
-    padding-left: 40px;
+    padding-left: $pagePadding;
 }
 
 .main-nav__link {

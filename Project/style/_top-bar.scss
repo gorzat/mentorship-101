@@ -6,8 +6,8 @@
     width: 100%;
     color: ghostwhite;
     display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: $pagePadding;
+    padding-right: $pagePadding;
     flex-direction: row;
 }
 

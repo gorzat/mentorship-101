@@ -24,13 +24,26 @@ a {
     background-color: dodgerblue;
     width: 100%;
     color: ghostwhite;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: row;
+}
+
+.top-bar__left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.top-bar__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .top-bar nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 40px;
 }
 
 .top-bar nav li {
@@ -39,10 +52,6 @@ a {
 
 h1{
     font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 40px;
 }
 
 h2 {

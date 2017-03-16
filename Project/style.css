@@ -10,24 +10,6 @@ body {
     background-color: lightblue;
 }
 
-.cities-list,
-.main-nav__list,
-.foooter__list {
-    list-style-type: none;
-    text-decoration: none;
-}
-
-.main-nav__element,
-.main-footer__list__element {
-    display: inline;
-}
-
-.main-nav__link,
-.main-footer__list__element__link {
-    color: ghostwhite;
-    text-decoration: none;
-}
-
 .top-bar {
     height: 80px;
     position: fixed;
@@ -54,26 +36,27 @@ body {
     height: 100%;
 }
 
-.main-nav__element {
-    padding-left: 40px;
-}
-
-.page_logo {
+.page-logo {
     font-size: 2rem;
 }
 
-.content-header__title {
-    padding-bottom: 10px;
-    font-size: 1.5rem;
+.main-nav__list {
+    list-style-type: none;
+    text-decoration: none;
 }
 
-.city-box__title {
-    padding-bottom: 10px;
-    font-weight: 400;
+.main-nav__element {
+    display: inline;
+    padding-left: 40px;
 }
 
-.city-description {
-    padding-bottom: 20px;
+.main-nav__link {
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+.main-nav__link--small {
+    font-size: 0.8rem;
 }
 
 .page-content {
@@ -88,23 +71,55 @@ body {
     padding: 20px 40px 20px 40px;
 }
 
-.cities-list__element {
-    border-top: 1px solid lightblue;
-    font-weight: 300;
-    padding: 20px;
+.content-header__title {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
 }
 
 .content-header__description {
     padding-bottom: 20px;
 }
 
+.cities-list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.cities-list__element {
+    border-top: 1px solid lightblue;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.city-box__title {
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.city-box__description {
+    padding-bottom: 20px;
+}
+
 .page-content__aside {
-    height: 100%;
     width: 50%;
     position: fixed;
-    top: 80;
+    top: 80px;
+    bottom: 30px;
     right: 0;
     z-index: -1;
+}
+
+.map-box {
+    width: 50%;
+    position: fixed;
+    top: 80px;
+    bottom: 30px;
+    right: 0;
+    z-index: -1;
+}
+
+.map-box__title {
+    display: none;
 }
 
 .map-box__picture {
@@ -126,10 +141,4 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-}
-
-.main-footer__list__element {
-    display: inline-block;
-    padding-right: 30px;
-    z-index: 99;
 }

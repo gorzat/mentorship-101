@@ -1,8 +1,10 @@
-.content-header__title {
-    padding-bottom: 10px;
-    font-size: 1.5rem;
-}
+.content-header {
+    &__title {
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
 
-.content-header__description {
-    padding-bottom: 20px;
+    &__description {
+        padding-bottom: 20px;
+    }
 }

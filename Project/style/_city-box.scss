@@ -1,8 +1,8 @@
 .city-box__title {
     padding-bottom: 10px;
-    font-weight: 400;
-}
-
-.city-box__description {
-    padding-bottom: 20px;
+        font-weight: 400;
+        
+    &__description {
+        padding-bottom: 20px;
+    }
 }

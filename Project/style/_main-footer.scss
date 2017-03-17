@@ -7,10 +7,10 @@
     display: flex;
     bottom: 0;
     padding-left: $pagePadding;
-}
-
-.main-footer__left {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    
+    &__left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
 }

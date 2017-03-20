@@ -2,30 +2,25 @@ const styles = [{ "class": "red", "params": [{ "name": "color", "value": "red" }
 const root = document.body;
 
 function toCamelCase(nameTest) {
-  for (let i = 0; i < nameTest.length; i++) {
-    if (nameTest[i] === "-") {
-      const start = nameTest.substring(0, i);
-      const end = nameTest.substring(i + 2);
-      const up = nameTest[i + 1].toUpperCase();
-      let camelName = start + up + end;
-      return camelName;
+  let camelName = nameTest;
+  for (let i = 0; i < camelName.length; i++) {
+    if (camelName[i] === "-") {
+      const start = camelName.substring(0, i);
+      const end = camelName.substring(i + 2);
+      const up = camelName[i + 1].toUpperCase();
+      camelName = start + up + end;
     }
   }
+  return camelName;
 }
 
 function addStyle(styleCss, el) {
   for (l = 0; l < styleCss.length; l++) {
-    let nameCss = styleCss[l].name;
-    let nameCssCamel = toCamelCase(styleCss[l].name);
+    let nameCss = toCamelCase(styleCss[l].name);
     let valueCss = styleCss[l].value;
-    if (nameCssCamel != null) {
-      el.style[nameCssCamel] = valueCss;
-    } else {
-      el.style[nameCss] = valueCss;
-    }
+    el.style[nameCss] = valueCss;
   }
 }
-
 
 function testDepth(el, depth) {
   for (var i = 0; el.children.length > i; i++) {

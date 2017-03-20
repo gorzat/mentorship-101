@@ -62,6 +62,13 @@
   right: 0;
   z-index: -1; }
 
+.city-box__title {
+  padding-bottom: 10px;
+  font-weight: 400; }
+
+.city-box__description {
+  padding-bottom: 20px; }
+
 .map-box {
   width: 50%;
   position: fixed;

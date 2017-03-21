@@ -1,6 +1,5 @@
 .cities-list {
-    @include plainList;
-    
+    @include plainList;    
     &__element {
         border-top: 1px solid lightblue;
         font-weight: 300;

@@ -1,19 +1,54 @@
 .main-nav{
-    &__list {
-        @include plainList;
-    }
 
-    &_element {
+    &__element{
         display: inline;
         padding-left: $pagePadding;
     }
-
     &__link {
         color: ghostwhite;
         text-decoration: none;
-
         &--small {
             font-size: 0.8rem;
         }
     }
+
+    &__trigger{
+        @media (min-width: 700px) {
+            display: none;
+        }
+    }
+
+    &__list--responsive {
+        display: none;
+        background-color: dodgerblue;
+        position: absolute;
+        top: 80px;
+        text-align: center;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        @media (min-width: 700px) {
+            display: block;
+            position: static;
+            border: none;
+        }
+    }
+
+    &__list--responsive--open {
+        display: block;
+    }
+
+    &__element--responsive {
+        display: block;
+        height: 40px;
+        padding-top: 10px;
+        @media(min-width: 700px){
+            display: inline;
+            padding-left: $pagePadding;
+        }
+    }
+
+        
+
+
 }

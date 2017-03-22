@@ -84,6 +84,20 @@
     right: 0;
     z-index: -1; }
 
+.content-search__field {
+  margin-bottom: 20px;
+  padding-left: 3%;
+  height: 40px;
+  width: 100%;
+  border: 1px solid lightblue; }
+
+.city-box__title {
+  padding-bottom: 10px;
+  font-weight: 400; }
+
+.city-box__description {
+  padding-bottom: 20px; }
+
 .map-box {
   width: 50%;
   position: fixed;

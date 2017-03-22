@@ -1,0 +1,9 @@
+.content-search{
+    &__field{
+        margin-bottom: 20px;
+        padding-left: 3%;
+        height: 40px;
+        width: 100%;
+        border: 1px solid $borderColor;
+    }
+}

@@ -65,6 +65,10 @@
       display: inline;
       padding-left: 40px; } }
 
+.main-nav__link--responsive {
+  color: ghostwhite;
+  text-decoration: none; }
+
 .page-logo {
   font-size: 2rem; }
 

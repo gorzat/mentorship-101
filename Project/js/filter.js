@@ -1,9 +1,9 @@
-let list = document.getElementsByClassName("cities-list__element");
+const list = document.getElementsByClassName("cities-list__element");
+const input = document.querySelector(".content-search__field");
 
 function search() {
-    let input = document.getElementsByClassName("content-search__field")[0].value.toLowerCase();
-    for (i = 0; i < list.length; i++) {
-        if (list[i].getElementsByClassName("city-box__title")[0].innerHTML.toLowerCase().indexOf(input) > -1) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].querySelector(".city-box__title").innerHTML.toLowerCase().indexOf(input.value.toLowerCase()) > -1) {
             list[i].style.display = "";
         }
         else {
@@ -12,4 +12,4 @@ function search() {
     }
 }
 
-document.getElementsByClassName("content-search__field")[0].addEventListener("keyup", search);
+document.querySelector(".content-search__field").addEventListener("keyup", search);

@@ -27,6 +27,7 @@
         left: 0;
         width: 100%;
         border-top: 1px solid ghostwhite;
+
         @media (min-width: 700px) {
             display: block;
             position: static;
@@ -42,13 +43,15 @@
         display: block;
         height: 40px;
         padding-top: 10px;
+
         @media(min-width: 700px){
             display: inline;
             padding-left: $pagePadding;
         }
     }
 
-        
-
-
+    &__link--responsive {
+        color: ghostwhite;
+        text-decoration: none;
+    }
 }

@@ -1,5 +1,8 @@
+const menu = document.querySelector(".main-nav__list--responsive");
+const trigger = document.querySelector(".main-nav__trigger");
+
 function menuOpen(){
-    document.querySelector(".main-nav__list--responsive").classList.toggle("main-nav__list--responsive--open");
+    menu.classList.toggle("main-nav__list--responsive--open");
 }
 
-document.querySelector(".main-nav__trigger").addEventListener("click", menuOpen);
+trigger.addEventListener("click", menuOpen);

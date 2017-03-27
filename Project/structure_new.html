@@ -9,6 +9,13 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            background-color: grey;
+        }
+    </style>
 
 </head>
 
@@ -43,7 +50,7 @@
                 <input class="content-search__field" type="text" placeholder="Search for city">
             </div>
             <ul class="cities-list">
-                <li class="cities-list__element">
+                <!--<li class="cities-list__element">
                     <article class="city-box">
                         <header class="city-box__top">
                             <h3 class="city-box__title">Warszawa</h3>
@@ -137,15 +144,15 @@
                             rankings.
                         </p>
                     </article>
-                </li>
+                </li>-->
             </ul>
         </section>
 
         <section class="page-content__aside">
             <div class="map-box">
                 <h2 class="map-box__title">Awesome map</h2>
-                <img class="map-box__picture" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Europe_countries_map_ka.png?uselang=pl"
-                    alt="europe map">
+                <div id="map" class="map-box__map">
+                </div>
             </div>
         </section>
     </section>
@@ -160,9 +167,19 @@
                 </ul>
             </nav>
         </div>
-    </footer>
+    </footer>    
+
     <script src="js/filter.js"></script>
+    
     <script src="js/menu.js"></script>
+    <script src="js/content.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqvp81Gng_rK5OAITvVSxkJ9RhGQGKSrE"
+  type="text/javascript"></script>
+
+
+
 </body>
 
 </html>
+
+<!-- AIzaSyCqvp81Gng_rK5OAITvVSxkJ9RhGQGKSrE -->

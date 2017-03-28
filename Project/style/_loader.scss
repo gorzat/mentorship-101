@@ -1,0 +1,29 @@
+.loader {
+    background-color: lightblue;
+    z-index: 99;
+    display: flex;
+    &__dot {
+        width: 18px;
+        height: 18px;
+        background-color: white;
+        border-radius: 50%;
+        transform: scale(0);
+        margin: 5px;
+
+        &--1 {
+            animation: scaling 1.4s 0s infinite;
+        }
+        &--2 {
+            animation: scaling 1.4s 0.2s infinite;
+        }
+        &--3 {
+            animation: scaling 1.4s 0.4s infinite;
+        }
+    }
+}
+
+@keyframes scaling {
+    50% {
+        transform: scale(1);
+    }
+}

@@ -83,18 +83,19 @@
   left: 0;
   width: 100%;
   border-top: 1px solid ghostwhite;
-  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   opacity: 0;
   transform: translateY(-100%);
-  z-index: -1; }
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s; }
   @media (min-width: 700px) {
     .main-nav__list--responsive {
-      display: block;
       position: static;
-      border: none; } }
+      border: none;
+      top: 80px;
+      opacity: 1;
+      transform: translateY(0); } }
 
 .main-nav__list--responsive--open {
-  display: block;
   transform: translateY(80px);
   opacity: 1; }
 

@@ -18,7 +18,7 @@ function displayCities(data) {
         currentLocation.lat = Math.round(data[i].location.latitude * 1000) / 1000;
         currentLocation.lng = Math.round(data[i].location.longitude * 1000) / 1000;
         locations.push(currentLocation);
-        frag.appendChild(createItem(data, i));
+        frag.appendChild(createItem(data[i]));
     }
     list.appendChild(frag);
     initMap(locations);
@@ -31,18 +31,15 @@ function initMap() {
         center: start
     });
 
-    const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
     for (let j = 0; j < locations.length; j++) {
         new google.maps.Marker({
             position: locations[j],
-            label: labels[j],
             map: map
         });
     }
 }
 
-function createItem(data, index) {
+function createItem(itemData) {
     const elLi = document.createElement('li');
     const elArticle = document.createElement('article');
     const elHeader = document.createElement('header');
@@ -56,7 +53,7 @@ function createItem(data, index) {
     elLi.appendChild(elArticle);
     elArticle.appendChild(elHeader);
     elHeader.appendChild(elH);
-    const text = data[index].location.city;
+    const text = itemData.location.city;
     const cityName = document.createTextNode(text);
     elH.appendChild(cityName);
 

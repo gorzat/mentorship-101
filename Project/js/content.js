@@ -2,8 +2,6 @@ const bikeAPI = new URL('https://api.citybik.es/v2/networks');
 const wikipediaAPI = new URL("https://simple.wikipedia.org/w/api.php?action=opensearch&origin=*");
 const locations = [];
 
-bikeAPI.searchParams;
-
 fetch(bikeAPI)
     .then(response => response.json())
     .then(data => displayCities(data.networks))
@@ -23,7 +21,7 @@ function displayCities(data) {
         elH.classList.add('city-box__title');
 
         const listEl = list.appendChild(elLi);
-        const listCurrentLi= list.getElementsByTagName('li')[i];
+        const listCurrentLi = list.getElementsByTagName('li')[i];
         listCurrentLi.appendChild(elArticle);
         elArticle.appendChild(elHeader);
         elHeader.appendChild(elH);
@@ -39,7 +37,7 @@ function displayCities(data) {
         locations.push(currentLocation);
     }
     initMap(locations);
-};
+}
 
 
 function initMap() {
@@ -76,4 +74,4 @@ function getArticleList(searchFor, listEl) {
             elP.classList.add('city-box__description');
         })
         .catch(error => console.error(error.message));
-};
+}

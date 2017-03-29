@@ -1,8 +1,26 @@
-.city-box__title {
-    padding-bottom: 10px;
+.city-box {
+    padding: 20px;
+    max-height: 56px;
+    overflow: hidden;
+    transition-property: max-height, background-color;
+    transition-duration: 0.5s;
+
+    &:hover {
+        max-height: 200px;
+        background-color: rgba(124, 252, 0, 0.14);
+
+        .city-box__description {
+            opacity: 1;
+        }        
+    }
+
+    &__title {
+        margin-bottom: 20px;
         font-weight: 400;
-        
+    }
+
     &__description {
-        padding-bottom: 20px;
+        opacity: 0;
+        transition: opacity 0.5s;
     }
 }

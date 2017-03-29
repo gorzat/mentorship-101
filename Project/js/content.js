@@ -2,10 +2,12 @@ const bikeAPI = new URL('https://api.citybik.es/v2/networks');
 const wikipediaAPI = new URL("https://simple.wikipedia.org/w/api.php?action=opensearch&origin=*");
 const locations = [];
 const limit = 10;
+const overlay = document.querySelector(".js-overlay");
 
 fetch(bikeAPI)
     .then(response => response.json())
     .then(data => displayCities(data.networks))
+    .then(hideOverlay)
     .catch(error => console.error(error.message));
 
 function displayCities(data) {
@@ -70,6 +72,15 @@ function appendArticle(dataWiki, listEl) {
     articleEl.appendChild(elP);
     elP.appendChild(cityDesc);
     elP.classList.add('city-box__description');
+}
+
+function hideOverlay(){
+    overlay.addEventListener("transitionend", deleteOverlay);
+    overlay.classList.add("overlay--hidden");
+};
+
+function deleteOverlay(){
+    overlay.parentNode.removeChild(overlay);
 }
 
 function getArticleList(searchFor, listEl) {

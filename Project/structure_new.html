@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 </head>
+
 <body>
     <header class="top-bar">
         <div class="top-bar__left">
@@ -28,8 +30,17 @@
             </nav>
         </div>
     </header>
-
     <section class="page-content">
+        <div class="overlay js-overlay">
+            <div class="loader">
+                <div class="loader__dot">
+                </div>
+                <div class="loader__dot">
+                </div>
+                <div class="loader__dot">
+                </div>
+            </div>
+        </div>
         <section class="page-content__main">
             <div class="content-header">
                 <h2 class="content-header__title">Cities</h2>
@@ -68,4 +79,5 @@
     <script src="js/content.js"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqvp81Gng_rK5OAITvVSxkJ9RhGQGKSrE"></script>
 </body>
+
 </html>

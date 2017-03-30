@@ -1,21 +1,34 @@
 .page-content {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
 
     &__main {
-        width: 50%;
-        position: absolute;
-        top: 80px;
-        background-color: ghostwhite;
+        background-color: $lightSecondary;
+        margin-top: $headerHeight;
         padding: 20px $pagePadding 20px $pagePadding;
+        width: 100%;
+        order: 2;
+
+        @media (min-width: $onlyLarge) {
+            width: 50%;
+            position: absolute;
+            top: $headerHeight;
+            margin-top: 0;
+        }
     }
 
     &__aside {
-        width: 50%;
-        position: fixed;
-        top: 80px;
-        bottom: 30px;
-        right: 0;
-        z-index: -1;
+        top: $headerHeight;
+        height: 50vh;
+        width: 100%;
+        order: 1;
+
+        @media (min-width: $onlyLarge) {
+            width: 50%;
+            height: 100vh;
+            bottom: 30px;
+            right: 0;
+        }
     }
 }

@@ -1,13 +1,19 @@
 .map-box {
-    width: 50%;
+    width: 100%;
     position: fixed;
-    top: 80px;
-    bottom: 30px;
+    top: $headerHeight;
     right: 0;
-    z-index: -1;
+    z-index: 10;
+
+    @media (min-width: $onlyLarge) {
+        width: 50%;
+        bottom: 30px;
+    }
+    
     &__title {
         display: none;
     }
+
     &__picture {
         height: 100%;
     }
@@ -15,6 +21,9 @@
 
 #map {
     width: 100%;
-    height: 400px;
-    background-color: grey;
+    height: 50vh;
+    background-color: $greenPrimary;
+    @media (min-width: $onlyLarge) {
+        height: 100vh;
+    }
 }

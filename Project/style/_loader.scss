@@ -1,12 +1,12 @@
 .loader {
-    background-color: lightblue;
+    background-color: $greenPrimary;
     z-index: 99;
     display: flex;
     
     &__dot {
         width: 18px;
         height: 18px;
-        background-color: white;
+        background-color: $lightPrimary;
         border-radius: 50%;
         transform: scale(0);
         margin: 5px;

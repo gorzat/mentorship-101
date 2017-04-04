@@ -1,7 +1,7 @@
 const bikeAPI = new URL('https://api.citybik.es/v2/networks');
 const wikipediaAPI = new URL("https://simple.wikipedia.org/w/api.php?action=opensearch&origin=*");
 const locations = [];
-const limit = 10;
+const limit = 100;
 const overlay = document.querySelector(".js-overlay");
 
 fetch(bikeAPI)
@@ -23,6 +23,7 @@ function displayCities(data) {
         frag.appendChild(createItem(data[i]));
     }
     list.appendChild(frag);
+    openArticle();
     initMap(locations);
 }
 
@@ -58,34 +59,53 @@ function createItem(itemData) {
     const text = itemData.location.city;
     const cityName = document.createTextNode(text);
     elH.appendChild(cityName);
-
-    getArticleList(text, elLi);
+    //getArticleList(text, elLi);
     return elLi;
 }
 
+function openArticle() {
+    document.querySelector('.cities-list').addEventListener("click", function (element) {
+        const artElDesc = element.target;
+        if (artElDesc && artElDesc.matches(".city-box")) {
+            if(artElDesc.children.length > 1){
+                artElDesc.classList.toggle('city-box--open');
+            }
+            else {
+                const text2 = element.target.querySelector(".city-box__title").innerHTML;
+                getArticleList(text2, artElDesc);
+                artElDesc.classList.add('city-box--open')
+            }
+        
+        }
+    })
+}
+
 function appendArticle(dataWiki, listEl) {
-    const articleEl = listEl.firstChild;
     const elP = document.createElement('p');
     const wikiText = dataWiki[2];
     const cityDesc = document.createTextNode(wikiText[0]);
-
-    articleEl.appendChild(elP);
-    elP.appendChild(cityDesc);
+    listEl.appendChild(elP);
+    if (wikiText[0] !== "" && wikiText[0] !== undefined){
+        elP.appendChild(cityDesc);
+    }
+    else {
+        const errorMsg = document.createTextNode("Sorry... We couldn't find any infromations about this city.")
+        elP.appendChild(errorMsg);
+    }
     elP.classList.add('city-box__description');
 }
 
-function hideOverlay(){
+function hideOverlay() {
     overlay.addEventListener("transitionend", deleteOverlay);
     overlay.classList.add("overlay--hidden");
 };
 
-function deleteOverlay(){
+function deleteOverlay() {
     overlay.parentNode.removeChild(overlay);
 }
 
 function getArticleList(searchFor, listEl) {
     wikipediaAPI.searchParams.append('search', searchFor);
-
     fetch(wikipediaAPI)
         .then(response => response.json())
         .then(dataWiki => appendArticle(dataWiki, listEl))

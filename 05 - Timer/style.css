@@ -1,0 +1,30 @@
+.timer {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background-color: lightgreen;
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+}
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  font-size: 72px;
+
+}
+

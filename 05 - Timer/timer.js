@@ -1,46 +1,53 @@
 const startButton = document.querySelector(".start");
 const stopButton = document.querySelector(".stop");
-const timeDisplay = document.querySelector(".time");
+const timeDisplayer = document.querySelector(".time");
 
+class Timer {
+  constructor(startBtn, stopBtn, placer) {
+    this.timeInterval = 0;
+    this.startBtn = startBtn;
+    this.stopBtn = stopButton;
+    this.placer = placer;
+  }
 
-function Timer() {
-
-  this.date = new Date();
-
-  this.hours = this.date.getHours();
-
-  this.minutes = this.date.getMinutes();
-
-  this.seconds = this.date.getSeconds();
-}
-
-Timer.prototype.format = function() {
-    if (this.seconds < 10 ) {this.seconds = "0" + this.seconds;}
-    if (this.minutes < 10 ) {this.minutes = "0" + this.minutes;}
-    if (this.hours < 10 ) {this.hours = "0" + this.hours;}
+  format() {
+    if (this.seconds < 10) {
+      this.seconds = "0" + this.seconds;
+    }
+    if (this.minutes < 10) {
+      this.minutes = "0" + this.minutes;
+    }
+    if (this.hours < 10) {
+      this.hours = "0" + this.hours;
+    }
     return (this.hours + ":" + this.minutes + ":" + this.seconds);
+  }
+
+  getDate() {
+    this.date = new Date();
+    this.hours = this.date.getHours();
+    this.minutes = this.date.getMinutes();
+    this.seconds = this.date.getSeconds();
+    return this.format();
+  }
+
+  display(placer) {
+    this.placer.innerHTML = this.getDate();
+  }
+
+  addListener() {
+    this.startBtn.addEventListener("click", () => this.start(this.placer));
+    this.stopBtn.addEventListener("click", () => this.stop(this.timeInterval));
+  }
+
+  start() {
+    this.timeInterval = setInterval(() => this.display(this.placer), 1000);
+  }
+
+  stop(timeInterval) {
+    clearInterval(timeInterval);
+  }
 }
 
-Timer.prototype.display = function() {
-  timeDisplay.innerHTML = this.format();
-}
-
-
-function loop() {
-  let time = new Timer();
-  time.display();
-}
-
-function start(){
-  timeInterval = setInterval(loop, 1000);
-}
-
-function stopTimer() {
-  clearInterval(timeInterval);
-}
-
-stopButton.addEventListener("click", stopTimer);
-startButton.addEventListener("click", start);
-
-
-//
+let time = new Timer(startButton, stopButton, timeDisplayer);
+time.addListener();

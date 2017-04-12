@@ -17,6 +17,7 @@
   width: 150px;
   height: 50px;
 }
+
 .controls {
   width: 100%;
   display: flex;
@@ -25,6 +26,4 @@
 
 .time {
   font-size: 72px;
-
 }
-

@@ -4,22 +4,23 @@ const timeDisplayer = document.querySelector(".time");
 
 class Timer {
   constructor(startBtn, stopBtn, placer) {
-    this.timeInterval = 0;
+    this.timeInterval = null;
     this.startBtn = startBtn;
     this.stopBtn = stopButton;
     this.placer = placer;
   }
 
+  addZero(time) {
+    if (time < 10) {
+      time = "0" + time;
+    }
+    return time;
+  }
+
   format() {
-    if (this.seconds < 10) {
-      this.seconds = "0" + this.seconds;
-    }
-    if (this.minutes < 10) {
-      this.minutes = "0" + this.minutes;
-    }
-    if (this.hours < 10) {
-      this.hours = "0" + this.hours;
-    }
+    this.hours = this.addZero(this.hours);
+    this.minutes = this.addZero(this.minutes);
+    this.seconds = this.addZero(this.seconds);
     return (this.hours + ":" + this.minutes + ":" + this.seconds);
   }
 
@@ -41,11 +42,11 @@ class Timer {
   }
 
   start() {
-    this.timeInterval = setInterval(() => this.display(this.placer), 1000);
+    this.timeInterval = setInterval(() => this.display(this.placer), 100);
   }
 
-  stop(timeInterval) {
-    clearInterval(timeInterval);
+  stop() {
+    clearInterval(this.timeInterval);
   }
 }
 

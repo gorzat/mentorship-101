@@ -12,10 +12,29 @@
 
 .btn {
   border: none;
-  background-color: lightgreen;
   margin: 10px;
   width: 150px;
   height: 50px;
+}
+
+.start {
+  background-color: lightgreen;
+  color: white;
+}
+
+.start--on {
+  background-color: lightslategray;
+  color: slategray;
+}
+
+.stop {
+  background-color: lightslategray;
+  color: slategray;
+}
+
+.stop--on {
+  background-color: orangered;
+  color: white;
 }
 
 .controls {

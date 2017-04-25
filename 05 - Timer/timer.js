@@ -32,7 +32,7 @@ class Timer {
     return this.format();
   }
 
-  display(placer) {
+  display() {
     this.placer.innerHTML = this.getDate();
   }
 
@@ -43,10 +43,18 @@ class Timer {
 
   start() {
     this.timeInterval = setInterval(() => this.display(this.placer), 100);
+    this.startBtn.setAttribute("disabled", "true");
+    this.startBtn.classList.add("start--on");
+    this.stopBtn.removeAttribute("disabled", "true");
+    this.stopBtn.classList.add("stop--on");
   }
 
   stop() {
     clearInterval(this.timeInterval);
+    this.stopBtn.setAttribute("disabled", "true");
+    this.stopBtn.classList.remove("stop--on");
+    this.startBtn.removeAttribute("disabled", "true");
+    this.startBtn.classList.remove("start--on");
   }
 }
 

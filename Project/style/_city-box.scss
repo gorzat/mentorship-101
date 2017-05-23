@@ -5,7 +5,7 @@
     transition-property: max-height, background-color;
     transition-duration: 0.5s;
 
-    &:hover {
+    &--open {
         max-height: 200px;
         background-color: rgba(124, 252, 0, 0.14);
 
